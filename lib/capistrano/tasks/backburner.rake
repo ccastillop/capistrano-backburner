@@ -7,6 +7,7 @@ namespace :backburner do
     args << "-P #{backburner_pid}"
     args << "-l #{backburner_log}"
     args << "-d"
+    args << "-b" unless fetch(:backburner_persist).nil?
     args.join(' ')
   end
 
